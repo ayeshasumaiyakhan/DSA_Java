@@ -1,3 +1,7 @@
+## Java Basics 2 problems
+
+> Try to Solve by your own and go to the solution only when you are stuck 
+
 #### Problem 1: Java program to find the numbers greater than the avargae of the numbers of a given array
 
 ```java
@@ -68,7 +72,9 @@ public class Main {
 >3x9=27<br>
 >3x10=30<br>
 
-#### Problem 3: Write a java program to sumthe values of an Array.
+------------------------------------------------------------------------------
+
+#### Problem 3: Write a java program to sum the values of an Array.
 ```java
 import java.util.*;
 public class Main {
@@ -116,7 +122,7 @@ public class Main {
 > Min Value:0
 
 -----------------------------------------------------------------------
-Program 5: Write a Java program to seperate 0s on the left side and 1s and on the right side
+Problem 5: Write a Java program to seperate 0s on the left side and 1s and on the right side
 ```java
 import java.util.*;
 public class Main {
@@ -144,6 +150,83 @@ public class Main {
 ```
 >Output:
 >0 0 0 0 1 1 1 1 1 1 
+
+-----------------------------------------------------------------------
+Problem 6: Write a java method to find the smallest among three numbers.
+```java
+import java.util.*;
+public class Main {
+  public static void main(String[] args) 
+    {
+      int a = 10;
+      int b = 2;
+      int c = 90;
+      int min = 0;
+      
+      if(a < b && a<c){
+          min =a;
+      }else if(b<c &&b<a){
+        min = b;
+        
+      }else{
+        min = c;
+      }
+      System.out.println("Min: "+ min);
+	}
+}
+```
+>Output: 
+>Min: 2
+
+---------------------------------------------------------------------------------
+Problem 7:Write a Java method to print Fibonacci series of n terms where n is argument passed by user.
+
+> In fibonacci series, next number is the sum of previous two numbers for example 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. 
+
+```java
+import java.io.*;
+import java.util.*;
+
+class GFG {
+	public static void main (String[] args) {
+	int n1=0,n2=1,n3; 
+     	Scanner sc = new Scanner(System.in);
+    	 int N = sc.nextInt(); //10
+     
+    	 System.out.print(n1+" "+n2);//printing 0 and 1    
+     	   
+	for(int i=2;i<N;++i)//loop starts from 2 because 0 and 1 are already printed    
+	{    
+		n3=n1+n2;    
+		System.out.print(" "+n3);    
+		n1=n2;    
+		n2=n3;    
+	}    
+	}
+}
+```
+>Output: 
+>0 1 1 2 3 5 8 13 21 34
+--------------------------------------------------------------------------------------------------
+Problem 8: Write a program to find the factorial value of any number entered through the keyboard.
+
+```java
+import java.io.*;
+
+class GFG {
+    public static void main (String[] args) {
+	int i,fact=1;  
+  	int number=5;//It is the number to calculate factorial    
+  	for(i=1;i<=number;i++){    
+          fact=fact*i;    
+          }    
+  System.out.println("Factorial of "+number+" is: "+fact);    	}
+}
+
+```
+>Output
+>Factorial of 5 is: 120
+
 
 
 
